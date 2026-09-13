@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Momentum helps students plan work, protect focus time, and make progress every day." />
+    <title>Momentum — Your study day, in focus</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <aside class="sidebar" aria-label="Main navigation">
+        <a class="brand" href="#overview" aria-label="Momentum home"><span class="brand-mark">m</span><span>momentum</span></a>
+        <nav>
+          <a class="nav-link active" href="#overview"><span>⌂</span> Overview</a>
+          <a class="nav-link" href="#tasks"><span>✓</span> My tasks <b id="taskCount">4</b></a>
+          <a class="nav-link" href="#focus"><span>◉</span> Focus room</a>
+          <a class="nav-link" href="#insights"><span>⌁</span> Insights</a>
+        </nav>
+        <div class="sidebar-bottom">
+          <div class="streak"><span>⚡</span><div><strong id="streakDays">7 day streak</strong><small>Keep your rhythm going</small></div></div>
+          <button class="profile" type="button"><span class="avatar">SV</span><span><strong>Srini</strong><small>Student plan</small></span><span aria-hidden="true">···</span></button>
+        </div>
+      </aside>
+
+      <section class="content">
+        <header class="topbar">
+          <button class="menu-button" type="button" aria-label="Open navigation">☰</button>
+          <div><p class="eyebrow" id="dateLabel">MONDAY, SEPTEMBER 13</p><h1>Make today count.</h1></div>
+          <div class="top-actions"><button class="icon-button" type="button" aria-label="Notifications">♢<i></i></button><button class="new-task" id="openTask" type="button">+ <span>New task</span></button></div>
+        </header>
+
+        <section id="overview" class="hero-grid" aria-label="Today overview">
+          <article class="hero-card">
+            <div class="hero-copy"><p class="eyebrow">TODAY'S INTENTION</p><h2>Small steps.<br><em>Real momentum.</em></h2><p>Your plan is clear. Start with one focused block and let the day unfold.</p><a href="#focus" class="text-link">Begin a focus session <span>→</span></a></div>
+            <div class="orbital" aria-hidden="true"><div class="orbit o1"></div><div class="orbit o2"></div><div class="planet">✦</div></div>
+          </article>
+          <article class="progress-card"><p class="eyebrow">DAILY PROGRESS</p><div class="progress-main"><span id="progressNum">2</span><small>/ 6<br>complete</small></div><div class="meter"><span id="progressBar" style="width:33%"></span></div><p class="muted" id="progressText">You’re building a good rhythm.</p><div class="mini-stats"><div><strong>2h 40m</strong><small>Focus time</small></div><div><strong>64%</strong><small>Week goal</small></div></div></article>
+        </section>
+
+        <section id="tasks" class="section-head"><div><p class="eyebrow">YOUR QUEUE</p><h2>What needs your attention?</h2></div><div class="filters" role="group" aria-label="Task filters"><button class="filter active" data-filter="all">All</button><button class="filter" data-filter="today">Today</button><button class="filter" data-filter="high">High priority</button></div></section>
+        <section class="task-list" id="taskList" aria-live="polite"></section>
+        <button class="add-row" id="openTask2" type="button"><span>+</span> Add something to your day</button>
+
+        <section class="bottom-grid">
+          <article id="focus" class="focus-card"><div><p class="eyebrow">FOCUS ROOM</p><h2>Ready when you are.</h2><p>One task. No distractions. Just progress.</p></div><div class="timer"><span id="timerDisplay">25:00</span><small>FOCUS BLOCK</small></div><button id="timerButton" class="start-focus" type="button">Start focus <span>→</span></button></article>
+          <article id="insights" class="insights-card"><div class="insight-heading"><div><p class="eyebrow">WEEKLY PULSE</p><h2>You’re showing up.</h2></div><span class="trend">↗ 18%</span></div><div class="bars" aria-label="Weekly completed task chart"><div><i style="height:31%"></i><small>M</small></div><div><i style="height:53%"></i><small>T</small></div><div><i style="height:41%"></i><small>W</small></div><div><i style="height:78%"></i><small>T</small></div><div><i style="height:60%"></i><small>F</small></div><div><i style="height:88%"></i><small>S</small></div><div class="today-bar"><i style="height:69%"></i><small>S</small></div></div><p class="muted">You finished <strong>18 tasks</strong> this week — 3 more than last week.</p></article>
+        </section>
+      </section>
+    </main>
+
+    <dialog id="taskDialog" aria-labelledby="dialogTitle"><form id="taskForm" method="dialog"><div class="dialog-title"><div><p class="eyebrow">PLAN YOUR DAY</p><h2 id="dialogTitle">Add a task</h2></div><button class="close" value="cancel" aria-label="Close">×</button></div><label>What needs doing?<input name="title" required maxlength="80" placeholder="e.g. Review calculus lecture" /></label><div class="form-row"><label>Due date<input name="date" type="date" /></label><label>Priority<select name="priority"><option value="high">High</option><option value="medium" selected>Medium</option><option value="low">Low</option></select></label></div><label>Estimated focus time<select name="duration"><option>25 min</option><option>50 min</option><option>1h 30m</option><option>2h+</option></select></label><button class="submit-task" value="default">Add to my day <span>→</span></button></form></dialog>
+    <script type="module" src="/src/main.js"></script>
+  </body>
+</html>
