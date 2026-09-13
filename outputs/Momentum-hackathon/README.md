@@ -73,6 +73,22 @@ The generated `dist/` folder is a plain static site: host it on GitHub Pages, Ne
 
 Built for evergreen Chrome, Edge, Firefox, and Safari. Uses the native `<dialog>` element for the task form and standard grid/flexbox layout — no polyfills, no transpilation.
 
+## Screenshots
+
+| Overview | Add a task | Task added |
+|---|---|---|
+| ![Overview](outputs/screenshots/01-overview-desktop.png) | ![Add a task](outputs/screenshots/02-add-task-dialog.png) | ![Task added](outputs/screenshots/03-task-added.png) |
+
+| High-priority filter | Live progress | Focus timer |
+|---|---|---|
+| ![High-priority filter](outputs/screenshots/04-high-priority-filter.png) | ![Tasks completed](outputs/screenshots/05-tasks-completed.png) | ![Focus timer](outputs/screenshots/06-focus-timer-running.png) |
+
+| Timer paused | Mobile layout | Mobile navigation |
+|---|---|---|
+| ![Timer paused](outputs/screenshots/07-focus-timer-paused.png) | ![Mobile view](outputs/screenshots/08-mobile-view.png) | ![Mobile navigation](outputs/screenshots/09-mobile-sidebar.png) |
+
+A narrated 2½-minute demo video is included at `outputs/demo-video.mp4`.
+
 ## Team
 
 WebFascinators — Srinidhi Vishal Chejarla (Team Lead)
