@@ -2,6 +2,8 @@
 
 A frontend-first study planning dashboard built for the Frontend Web Development Hackathon 2026.
 
+**Live demo:** https://srinidhi-vishal1493.github.io/Momentum/
+
 ## The problem
 
 Students often manage fragmented deadlines, study plans, and focus time across several tools. Momentum brings a daily task queue, light prioritisation, meaningful progress feedback, and a distraction-free focus timer into one fast, browser-based experience.
