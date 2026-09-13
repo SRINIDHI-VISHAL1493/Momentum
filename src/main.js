@@ -1,5 +1,3 @@
-import './style.css';
-
 const today = new Date();
 const isoToday = today.toISOString().slice(0, 10);
 const defaultTasks = [
